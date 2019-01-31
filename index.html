@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Interactive Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h3>Registration Form</h3>
+        <form>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" name="user_name" data-error-text="Please provide your name." id="name" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <div>
+                    <label class="md-4">Gender</label>
+                </div>
+
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" data-error-text="gender is required" name="gender" id="male"
+                        value="male">
+                    <label class="form-check-label" for="male">Male</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" data-error-text="gender is required" name="gender" id="female"
+                        value="female">
+                    <label class="form-check-label" for="female">Female</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" class="form-control" id="email" name="user_email">
+            </div>
+
+            <div class="form-group">
+                <label for="role">Job role</label>
+                <select name="job_role" id="role" class="form-control">
+                    <option value="">Please select your job role</option>
+                    <option value="full stack js developer">Full Stack JavaScript Developer</option>
+                    <option value="front end developer">Front End Developer</option>
+                    <option value="back end developer">Back End Developer</option>
+                    <option value="designer">Designer</option>
+                    <option value="student">Student</option>
+                </select>
+            </div>
+
+            <hr class="my-4">
+            <h5 class="md-4">Which Topics Interest You Most?</h5>
+
+            <div class="form-group">
+                <div class="form-check">
+                    <input class="form-check-input" data-error-text="Please choose your topics" name="topics" type="checkbox"
+                        value="javascript" id="javascript">
+                    <label class="form-check-label" for="javascript">
+                        JavaScript
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" data-error-text="Please choose your topics" name="topics" type="checkbox"
+                        value="PHP" id="php">
+                    <label class="form-check-label" for="php">
+                        PHP
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" data-error-text="Please choose your topics" name="topics" type="checkbox"
+                        value="Java" id="java">
+                    <label class="form-check-label" for="java">
+                        Java
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" data-error-text="Please choose your topics" name="topics" type="checkbox"
+                        value="SQL" id="sql">
+                    <label class="form-check-label" for="sql">
+                        SQL
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" data-error-text="Please choose your topics" name="topics" type="checkbox"
+                        value="C#" id="c#">
+                    <label class="form-check-label" for="c#">
+                        C#
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" data-error-text="Please choose your topics" name="topics" type="checkbox"
+                        value="Python" id="python">
+                    <label class="form-check-label" for="python">
+                        Python
+                    </label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" data-error-text="Please choose your topics" name="topics" type="checkbox"
+                        value="iOS/Swift" id="ios">
+                    <label class="form-check-label" for="ios">
+                        iOS/Swift
+                    </label>
+                </div>
+            </div>
+
+            <hr class="md-4">
+            <h5 class="md-4">Payment Info</h5>
+
+            <div class="form-group">
+                <div class="form-row">
+                    <div class="form-group col-lg-6">
+                        <label for="cc-num">Card Number:</label>
+                        <input class="form-control" id="cc-num" type="text">
+                    </div>
+
+                    <div class="form-group col-lg">
+                        <label for="zip">Zip Code:</label>
+                        <input class="form-control" id="zip" type="text">
+                    </div>
+
+                    <div class="form-group col-lg">
+                        <label for="cvv">CVV:</label>
+                        <input class="form-control" id="cvv" type="text">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="form-row">
+                    <label class="col-lg-12">Expiration Date</label>
+
+                    <div class="form-group col-lg-8">
+                        <select class="custom-select form-control" name="exp-month" id="exp-month">
+                            <option value="">Please select month</option>
+                            <option value="1">1 - January</option>
+                            <option value="2">2 - February</option>
+                            <option value="3">3 - March</option>
+                            <option value="4">4 - April</option>
+                            <option value="5">5 - May</option>
+                            <option value="6">6 - June</option>
+                            <option value="7">7 - July</option>
+                            <option value="8">8 - August</option>
+                            <option value="9">9 - September</option>
+                            <option value="10">10 - October</option>
+                            <option value="11">11 - November</option>
+                            <option value="12">12 - December</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group col-lg">
+                        <select class="custom-select form-control" name="exp-year" id="exp-year">
+                            <option value="">Please select year</option>
+                            <option value="2019">2019</option>
+                            <option value="2020">2020</option>
+                            <option value="2021">2021</option>
+                            <option value="2022">2022</option>
+                            <option value="2023">2023</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="form-control btnbtn btn-success mb-2">Register</button>
+            </div>
+        </form>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
